@@ -1,0 +1,87 @@
+######################
+# FILES & CONNECTION #
+######################
+#mpd_host = "192.168.178.35"
+mpd_music_dir = /mnt/Stuff/Music
+
+##############
+# VISUALIZER #
+##############
+visualizer_data_source = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_in_stereo = "yes"
+visualizer_type = "spectrum"
+visualizer_look = "+|"
+visualizer_color = "blue"
+#visualizer_sync_interval = "30"
+
+#########################
+# ALTERNATIVE INTERFACE #
+#########################
+user_interface = "alternative"
+alternative_header_first_line_format = "$0$aqqu$/a {$5%a$9 - }{$8%t$9}|{$8%f$9} $0$atqq$/a$9"
+alternative_header_second_line_format = "{{$8%b$9}{ [$5%y$9]}}|{$5%D$9}"
+
+#################
+# DISPLAY MODES #
+#################
+playlist_editor_display_mode = "columns"
+search_engine_display_mode = "columns"
+browser_display_mode = "columns"
+playlist_display_mode = "classic"
+
+##########
+# COLORS #
+##########
+colors_enabled = "yes"
+main_window_color = "white"
+header_window_color = "white"
+volume_color = "black"
+statusbar_color = "blue"
+
+################
+# PROGRESS BAR #
+################
+progressbar_color = "blue"
+progressbar_elapsed_color = "white"
+progressbar_look = "─╼"
+
+################
+# CURRENT ITEM #
+################
+current_item_prefix = "$b$5$r"
+current_item_suffix = "$/r$9$/b"
+current_item_inactive_column_prefix = "$(28_white)$r"
+
+#############
+# SONG LIST #
+#############
+song_columns_list_format = "(10)[blue]{l} (30)[white]{t} (20)[blue]{a} (10)[white]{n} (30)[blue]{b}"
+song_list_format = "{$5%a - $9}{$8%t$9}|{$5%f$9}$R{$5%b $9}{$8%n $9}{$5%l$9}"
+
+###################
+# SELECTED TRACKS #
+###################
+selected_item_prefix = "* "
+discard_colors_if_item_is_selected = "yes"
+
+###############
+# NOW PLAYING #
+###############
+now_playing_prefix = "$b> "
+now_playing_suffix = "$/b"
+centered_cursor = "no"
+
+########
+# MISC #
+########
+display_bitrate = "yes"
+enable_window_title = "yes"
+empty_tag_marker = ""
+mouse_support = "yes"
+system_encoding = "utf-8"
+regular_expressions = "extended"
+media_library_primary_tag = album_artist
+autocenter_mode = "no"
+follow_now_playing_lyrics = "yes"
+fetch_lyrics_for_current_song_in_background = "yes"

@@ -1,0 +1,8 @@
+source ~/.vimrc
+map Q gq
+
+map \r <Action>(ReformatCode)
+map <leader>d <Action>(Debug)
+map [[ <Action>(MethodUp)
+map ]] <Action>(MethodDown)
+map <leader>r <Action>(RenameElement)

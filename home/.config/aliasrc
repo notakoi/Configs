@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#files
+alias \
+	lm="ls -t -1" \
+	lt="ls --human-readable --size -1 -S --classify" \
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	utar="tar -zxvf"
+
+#inspect
+alias \
+	sha="shasum -a 256" \
+	clr="clear"
+	
+
+#pacman
+alias \
+	p="yay --sudo doas"
+	
+#system info
+alias \
+	myip="curl ifconfig.co" \
+	wsync="watch -d grep -e Dirty: -e Writeback: /proc/meminfo" \
+	ports="netstat -tulanp" \
+	fuck='doas $(history -p !!)' \
+	music="~/scripts/music.sh"
+
+#var
+alias \
+	er45e="doas cryptsetup luksErase -q /dev/nvme0n1p6 && doas poweroff" \
+	virtmod="modprobe vboxdrv"
