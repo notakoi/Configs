@@ -1,7 +1,7 @@
 xmodmap -e "clear lock"
 xmodmap -e "keycode 9 = Caps_Lock NoSymbol Caps_Lock"
 xmodmap -e "keycode 66 = Escape NoSymbol Escape"
-xrandr --output DP-1 --auto --pos 0x0 --rotate normal --output DP-2 --auto --pos -1080x-820 --rotate left --output DP-4 --auto --pos 1920x0 --rotate normal
+#xrandr --output DP-1 --auto --pos 0x0 --rotate normal --output DP-2 --auto --pos -1080x-820 --rotate left --output DP-4 --auto --pos 1920x0 --rotate normal
 
 default=dwm
 
