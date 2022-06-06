@@ -20,6 +20,6 @@ case $session in
 				wireplumber &
 				nitrogen --restore &
 				picom -f &
-				# st bash -c "source /etc/profile.d/chkcryptoboot-profilealert.sh ; neofetch ; bash" &
+				#st bash -c "~/scripts/chkcryptoboot-profilealert.sh ; neofetch ; bash" &
 				exec dbus-launch dwm;;
 esac
