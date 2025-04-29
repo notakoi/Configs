@@ -1,8 +1,8 @@
 autoload -U colors && colors
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100000
+SAVEHIST=100000
 
 #git integration
 autoload -Uz vcs_info
@@ -33,25 +33,31 @@ function TRAPINT() {
 PROMPT='${vim_mode}%F{12}[%F{27}%n%F{12}][%F{47}%~%F{12}]%F{12}${vcs_info_msg_0_}%F{12}$%F{white} '
 RPROMPT='%F{12}[%F{red}%?%F{12}][%F{red}%*%F{12}]'
 
-autoload -Uz compinit
-zstyle ':completion:*' menu select completer _expand _complete _ignored _correct _approximate
-zmodload zsh/complist
-compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' menu select completer _expand _ignored _correct _approximate
+
+
+autoload -Uz compinit && compinit
+
 _comp_options+=(globdots)
 
-bindkey -v
+zmodload -i zsh/complist
+
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+bindkey -e
 
 zle_highlight+=(paste:none)
 
 source ~/.config/aliasrc
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 zstyle ':autocomplete:*complete*:*' insert-unambiguous yes
 zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
+bindkey -v
+bindkey '^R' history-incremental-search-backward
