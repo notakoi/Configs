@@ -8,7 +8,8 @@ alias \
 	mv="mv -iv" \
 	rm="rm -v" \
 	mkd="mkdir -pv" \
-	utar="tar -zxvf"
+	utar="tar -zxvf" \
+	vim="nvim"
 
 #inspect
 alias \
@@ -18,7 +19,7 @@ alias \
 
 #pacman
 alias \
-	p="yay --sudo doas"
+	p="paru"
 	
 #system info
 alias \
