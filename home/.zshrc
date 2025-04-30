@@ -61,4 +61,3 @@ zstyle ':autocomplete:*history*:*' insert-unambiguous yes
 zstyle ':autocomplete:menu-search:*' insert-unambiguous yes
 bindkey -v
 bindkey '^R' history-incremental-search-backward
-
